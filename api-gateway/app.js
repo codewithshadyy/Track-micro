@@ -13,3 +13,8 @@ app.use("/products", proxy(
         proxyReqPathResolver:(req) => req.originalUrl
     }
 ))
+
+
+app.listen(process.env.PORT, () => {
+    console.log(`http://localhost:${process.env.PORT}`)
+})
